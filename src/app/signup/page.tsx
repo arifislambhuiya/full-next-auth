@@ -48,7 +48,7 @@ export default function SingupPage() {
       <hr />
       <label htmlFor="username">Username</label>
       <input
-        className="p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600"
+        className="p-2 border text-black border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600"
         id="username"
         type="username"
         value={user.username}
@@ -57,7 +57,7 @@ export default function SingupPage() {
       />
       <label htmlFor="email">Email</label>
       <input
-        className="p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600"
+        className="p-2 border text-black border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600"
         id="email"
         type="email"
         value={user.email}
@@ -67,7 +67,7 @@ export default function SingupPage() {
 
       <label htmlFor="password">Password</label>
       <input
-        className="p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600"
+        className="p-2 border text-black border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600"
         id="password"
         type="password"
         value={user.password}
@@ -76,7 +76,7 @@ export default function SingupPage() {
       />
       <button
         onClick={onSingup}
-        className="p-2 border bg-blue-600 text-white border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-r-gray-600"
+        className="p-2 border bg-blue-600 hover:bg-blue-900 text-white border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-r-gray-600"
       >
         {buttonDisabled ? "No singup" : "signup"}
       </button>

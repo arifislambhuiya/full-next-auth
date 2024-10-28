@@ -43,7 +43,7 @@ export default function LoginPage() {
 
       <label htmlFor="email">Email</label>
       <input
-        className="p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600"
+        className="p-2 border text-black border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600"
         id="email"
         type="email"
         value={user.email}
@@ -53,7 +53,7 @@ export default function LoginPage() {
 
       <label htmlFor="password">Password</label>
       <input
-        className="p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600"
+        className="p-2 border text-black border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600"
         id="password"
         type="password"
         value={user.password}
@@ -62,7 +62,7 @@ export default function LoginPage() {
       />
       <button
         onClick={onLogin}
-        className="p-2 border border-gray-300 text-white bg-blue-600 rounded-lg mb-4 focus:outline-none focus:border-r-gray-600"
+        className="p-2 border border-gray-300 text-white bg-blue-600 hover:bg-blue-900 rounded-lg mb-4 focus:outline-none focus:border-r-gray-600"
       >
         {buttonDisable ? "No Login" : "Login"}
       </button>
