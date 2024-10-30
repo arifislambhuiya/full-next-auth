@@ -7,14 +7,14 @@ import { useEffect, useState } from "react";
 export default function VerifyEmailPae() {
   const [token, setToken] = useState("");
   const [verified, setVerified] = useState(false);
-  // const [error, setError] = useState(false);
+  const [error, setError] = useState(false);
 
   const verifyUserEmail = async () => {
     try {
       await axios.post("/api/users/verifyemail", { token });
       setVerified(true);
     } catch (error: any) {
-      // setError(true);
+      setError(true);
       console.log(error.response.data);
     }
   };
@@ -36,16 +36,22 @@ export default function VerifyEmailPae() {
         {token ? `${token}` : "No token"}
       </h2>
       {verified && (
-        <div>
+        <div className="items-center justify-center  py-2">
           <h2 className="text-2xl">Email Verified</h2>
-          <Link href={"/login"}>Login</Link>
+
+          <Link
+            className="p-2 border bg-blue-600 hover:bg-blue-900 text-white border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-r-gray-600"
+            href={"/login"}
+          >
+            Login
+          </Link>
         </div>
       )}
-      {/* {error && (
+      {error && (
         <div>
           <h2 className="text-2xl bg-red-400 text-black">Error</h2>
         </div>
-      )} */}
+      )}
     </div>
   );
 }

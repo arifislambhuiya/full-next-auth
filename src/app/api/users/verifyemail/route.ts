@@ -15,10 +15,10 @@ export async function POST(request: NextRequest) {
       verifyToken: token,
       verifyTokenExpiry: { $gt: Date.now() },
     });
-    console.log(user);
+    console.log("User Not found", user);
 
     if (!user) {
-      return NextResponse.json({ error: "Invalid Token" }, { status: 400 });
+      return NextResponse.json({ message: "Invalid Token" }, { status: 400 });
     }
 
     user.isVerified = true;
